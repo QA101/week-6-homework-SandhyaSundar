@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class IntergerArray_Panlindrome {
 
@@ -16,8 +17,35 @@ public class IntergerArray_Panlindrome {
 		   System.out.println("palindrome number ");    
 		  else    
 		   System.out.println("not palindrome");    
-		}  
-		}  
+		
 	
+	
+	int[] element=new int[] {4,5,3,2,3,5,4};
+	int[] inputArray= new int[] {2,3,4,5,7,8};
+	boolean outputArray = numberPalindrome(element);
+	
+	
+	if (numberPalindrome(element)) {
+	System.out.println("This is a Palindrome array");
+	}
+	if (numberPalindrome(inputArray)) {
+		System.out.println("This is a Palindrome array");
+	}
+	else {
+		System.out.println("This is not a Palindrome array");
+	}
+		
+}
+	public static boolean numberPalindrome(int[] methodInput) {
+		// TODO Auto-generated method stub
+		
+		for(int i=0;i<methodInput.length/2;i++) {
+			 if(methodInput[i]!=methodInput[methodInput.length-(i+1)]) {
+				 return false;
+			 }			
+	}  
+		return true;
+		}  
+}
 
 
